@@ -11,7 +11,7 @@ interface ShareInterface
 class Twitter implements ShareInterface
 {
     private $hola;
-    private $saludar;
+    /* private $saludar; */
 
     public function setMessage($message)
     {
@@ -25,7 +25,7 @@ class Twitter implements ShareInterface
 
     public function share()
     {
-        echo sprintf('Compartiendo "%s" en Twitter.',$this->hola,$this->saludar).PHP_EOL;
+        echo sprintf('Compartiendo "%s" en Twitter.',$this->hola).PHP_EOL;
         /* echo "Compartiendo ".$this->hola."en Twitter ".$this->saludar."."; */
         echo "<br>";
     }
@@ -34,19 +34,19 @@ class Twitter implements ShareInterface
  
 class Facebook implements ShareInterface
 {
-    private $message;
+    private $hola;
     /* private $saludar; */
 
     public function setMessage($message)
     {
-        $this->message = $message;
+        $this->hola = $message;
     }
  
 
 
     public function share()
     {
-        echo sprintf('Compartiendo "%s" en Facebook.', $this->message).PHP_EOL;
+        echo sprintf('Compartiendo "%s" en Facebook.', $this->hola).PHP_EOL;
         echo "<br>";
     }
     
@@ -58,17 +58,17 @@ class Facebook implements ShareInterface
  
 class Linkedin implements ShareInterface
 {
-    private $message;
+    private $hola;
     /* private $saludar; */
 
     public function setMessage($message)
     {
-        $this->message = $message;
+        $this->hola = $message;
     }
  
     public function share()
     {
-        echo sprintf('Compartiendo "%s" en Linkedin.', $this->message).PHP_EOL;
+        echo sprintf('Compartiendo "%s" en Linkedin.', $this->hola).PHP_EOL;
         echo "<br>";
     }
 
